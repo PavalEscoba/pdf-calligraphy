@@ -35,21 +35,41 @@
   a:hover {
     color: lightblue;
   }
+
+  p {
+    font-size: 24px;
+    line-height: 1.41;
+    border-bottom: 1px solid #444;
+    padding-bottom: 20px;
+  }
+
+  section {
+    padding: 20px;
+  }
 </style>
 
 <body>
   <div class="container">
     <div class="row">
       <div class="col-xs-12">
-        <h1>Foundation Hand Writting</h1>
-        <p>here you can generate pdf with templates for calligraphy practice</p>
-        <a href="" target="_blank" id="download">Download it</a>
+        <section id="section">
+          <h1>Foundation Hand Writting</h1>
+          <p>here you can generate pdf with templates for calligraphy practice</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima unde ipsa quos atque adipisci est,
+            inventore voluptates, vero cupiditate, nam iste cumque pariatur delectus dolorum ipsum omnis laboriosam at
+            architecto!</p>
+          <a href="" target="_blank" id="download">Download it</a>
+        </section>
       </div>
     </div>
   </div>
 
   <script src=" ./scripts/jspdf.min.js">
   </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+    integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
   <script src="./scripts/main.js"></script>
 </body>
 
