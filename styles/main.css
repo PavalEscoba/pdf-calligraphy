@@ -1,0 +1,54 @@
+body {
+  padding-top: 40px;
+}
+
+h1 {
+  font-family: 'Philosopher', serif;
+}
+
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+
+a {
+  color: inherit;
+  transition: all 0.2s ease;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: lightblue;
+}
+
+p {
+  font-size: 24px;
+  line-height: 1.41;
+  border-bottom: 1px solid #444;
+  padding-bottom: 20px;
+}
+
+section {
+  padding: 20px;
+}
+
+.guideline {
+  position: relative;
+  border: 1px solid #555;
+  height: 110px;
+} 
+.guideline + .guideline {
+  margin-top: 20px;
+}
+
+img {
+  position: absolute;
+}
+.one {
+  bottom: 0;
+  left: 20px;
+}
+
+.two {
+  top: 0;
+  left:40px
+}
