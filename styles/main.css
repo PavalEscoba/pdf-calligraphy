@@ -1,3 +1,6 @@
+html {
+  font-size: 12px;
+}
 body {
   padding-top: 40px;
 }
@@ -33,22 +36,42 @@ section {
 
 .guideline {
   position: relative;
-  border: 1px solid #555;
-  height: 110px;
 } 
 .guideline + .guideline {
-  margin-top: 20px;
+  margin-top: 14.3px;
+}
+.btn {
+  margin: 1rem;
 }
 
-img {
-  position: absolute;
-}
-.one {
-  bottom: 0;
-  left: 20px;
+.btn:disabled {
+  cursor: not-allowed;
 }
 
-.two {
-  top: 0;
-  left:40px
+.base {
+  border-top: 1px solid #555;
+  border-bottom: 1px solid #555;
+}
+
+.ascender {
+  border-top: 1px solid #555;
+}
+
+.descender {
+  border-bottom: 1px solid #555;
+}
+
+.nib-height {
+  height: 14.3px;
+  width: 10px;
+  background-color: #000;
+}
+
+.base .nib-height:nth-of-type(even){
+  margin-left: 10px;
+}
+
+.ascender .nib-height:nth-of-type(odd),
+.descender .nib-height:nth-of-type(odd){
+  margin-left: 10px;
 }

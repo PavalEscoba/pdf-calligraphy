@@ -18,34 +18,99 @@
 <body>
   <div class="container">
     <div class="row">
-      <div class="col-xs-12">
+      <div class="col-sm-6">
         <section id="section">
           <h1>Foundation Hand Writting</h1>
-          <p>here you can generate pdf with templates for calligraphy practice</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima unde ipsa quos atque adipisci est,
-            inventore voluptates, vero cupiditate, nam iste cumque pariatur delectus dolorum ipsum omnis laboriosam at
-            architecto!</p>
-          <a href="" target="_blank" id="download">Download it</a>
+          <div class="select-group">
+            <div class="form-group">
+              <label for="nib-type">Choose a nib width</label>
+              <select class="custom-select" name="nib-type" id="nib">
+                <option value="1.5">Parallel Pen 1.5</option>
+                <option value="2.4">Parallel Pen 2.4</option>
+                <option value="3.8">Parallel Pen 3.8</option>
+                <option value="6.0">Parallel Pen 6.0</option>
+              </select>
+              <label for="writing-type">Choose a writting style</label>
+              <select class="custom-select" name="writting-type" id="writting">
+                <option value="foundational">Foundational hand</option>
+                <option value="gothic">Gothic</option>
+                <option value="copperplate">Parallel Pen 1.5</option>
+              </select>
+            </div>
 
-          <div class="guideline">
-            <img src="./images/foundational/left-round-storke.svg" alt="" class="one">
-            <img src="./images/foundational/right-round-stroke.svg" alt="" class="two">
+            <div class="letters">
+              <button class="btn btn-success" data-letter="a">a</button>
+              <button class="btn btn-light" disabled data-letter="b">b</button>
+              <button class="btn btn-light" disabled data-letter="c">c</button>
+              <button class="btn btn-light" disabled data-letter="d">d</button>
+              <button class="btn btn-light" disabled data-letter="e">e</button>
+              <button class="btn btn-light" disabled data-letter="f">f</button>
+              <button class="btn btn-light" disabled data-letter="g">g</button>
+              <button class="btn btn-light" disabled data-letter="h">h</button>
+              <button class="btn btn-success" data-letter="i">i</button>
+              <button class="btn btn-light" disabled data-letter="j">j</button>
+              <button class="btn btn-success" data-letter="k">k</button>
+              <button class="btn btn-light" disabled data-letter="l">l</button>
+              <button class="btn btn-light" disabled data-letter="m">m</button>
+              <button class="btn btn-light" disabled data-letter="n">n</button>
+              <button class="btn btn-light" disabled data-letter="o">o</button>
+              <button class="btn btn-light" disabled data-letter="p">p</button>
+              <button class="btn btn-light" disabled data-letter="q">q</button>
+              <button class="btn btn-light" disabled data-letter="r">r</button>
+              <button class="btn btn-light" disabled data-letter="s">s</button>
+              <button class="btn btn-light" disabled data-letter="t">t</button>
+              <button class="btn btn-light" disabled data-letter="u">u</button>
+              <button class="btn btn-light" disabled data-letter="v">v</button>
+              <button class="btn btn-light" disabled data-letter="w">w</button>
+              <button class="btn btn-light" disabled data-letter="x">x</button>
+              <button class="btn btn-light" disabled data-letter="y">y</button>
+              <button class="btn btn-light" disabled data-letter="z">z</button>
+            </div>
+
           </div>
-          <div class="guideline">
-            <img src="./images/foundational/letters/lower-o.svg" alt="" class="letter">
-          </div>
+          <button id="download">Download it</button>
         </section>
       </div>
+      <div class="col-sm-6">
+        <div id="sheet">
+          <div class="guideline">
+            <div class="angle-line">
+              <span class="angle-stroke"></span>
+              <span class="angle-stroke"></span>
+              <span class="angle-stroke"></span>
+              <span class="angle-stroke"></span>
+              <span class="angle-stroke"></span>
+            </div>
+            <div class="ascender">
+              <div class="nib-height"></div>
+              <div class="nib-height"></div>
+              <div class="nib-height"></div>
+            </div>
+            <div class="base">
+              <div class="nib-height"></div>
+              <div class="nib-height"></div>
+              <div class="nib-height"></div>
+              <div class="nib-height"></div>
+              <div class="nib-height"></div>
+            </div>
+            <div class="descender">
+              <div class="nib-height"></div>
+              <div class="nib-height"></div>
+              <div class="nib-height"></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
     </div>
-  </div>
 
-  <script src=" ./scripts/jspdf.min.js">
-  </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
-    integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src=" ./scripts/jspdf.min.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+      integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-  <script src="./scripts/main.js"></script>
+    <script src="./scripts/main.js"></script>
 </body>
 
 </html>

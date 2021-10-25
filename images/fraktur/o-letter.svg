@@ -1,0 +1,10 @@
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 85 123" width="85" height="123">
+	<title>Page 1</title>
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: #000000;stroke: #000000;stroke-linecap:round;stroke-linejoin:round;stroke-width: 1.4 } 
+	</style>
+	<g id="Page 1">
+		<path id="-e-fracture-o-letter" fill-rule="evenodd" class="shp0" d="M41.42 0.78C42.8 0.31 72.71 17.84 84.13 16.47C81.91 19.32 74.51 24.47 74.51 24.47L74.84 85.72C72.14 89.19 37.89 116.72 30.82 121.65C27 120.2 4.41 104.31 1.39 99.13C3.42 96.97 4.17 97.95 5.5 96.46C5.31 93.44 7.59 36.38 1.59 29.31C3.33 25.16 33.74 3.4 41.42 0.78ZM29.83 94.32C35.42 98.01 47.4 105.5 47.4 105.5C47.4 105.5 53.28 100.67 55.56 98.52C55.96 94.77 54.63 41.94 54.57 37.24C54.51 32.53 55.26 31.36 57.91 29.18C51.41 31.89 21.79 14.91 23.3 16.46C29.75 23.04 28.59 89.58 29.83 94.32Z" />
+	</g>
+</svg>
