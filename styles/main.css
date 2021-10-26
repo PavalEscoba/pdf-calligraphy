@@ -2,7 +2,8 @@ html {
   font-size: 12px;
 }
 body {
-  padding-top: 40px;
+  padding: 40px 0;
+
 }
 
 h1 {
@@ -34,12 +35,35 @@ section {
   padding: 20px;
 }
 
-.guideline {
-  position: relative;
-} 
-.guideline + .guideline {
-  margin-top: 14.3px;
+select + label {
+  margin-top: 16px;
 }
+
+.paper {
+  position: relative;
+  padding-top: 30px;
+  width: 210mm;
+  height: 297mm;
+  background-color: #eee;
+}
+
+.slopes {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.slope {
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background-color: #8b8b8b;
+}
+
 .btn {
   margin: 1rem;
 }
@@ -48,23 +72,44 @@ section {
   cursor: not-allowed;
 }
 
+.guideline {
+  position: relative;
+}
+
+.guideline + .guideline {
+  margin-top: 14.3px;
+}
+
+.ascender, .base,.descender {
+  position: relative;
+}
+
 .base {
-  border-top: 1px solid #555;
-  border-bottom: 1px solid #555;
+  height: 72px;
+  display: flex;
 }
 
-.ascender {
-  border-top: 1px solid #555;
+
+.ascender:after,
+.base:before,
+.base:after,
+.descender:after {
+  content: "";
+  display: block;
+  background-color: #555;
+  height: 1px;
+  position: absolute;
+  width: 100%;
 }
 
-.descender {
-  border-bottom: 1px solid #555;
+.ascender::after,
+.base::before {
+  bottom: 100%;
 }
 
-.nib-height {
-  height: 14.3px;
-  width: 10px;
-  background-color: #000;
+.base::after,
+.descender:after{
+  top: 100%;
 }
 
 .base .nib-height:nth-of-type(even){
@@ -74,4 +119,131 @@ section {
 .ascender .nib-height:nth-of-type(odd),
 .descender .nib-height:nth-of-type(odd){
   margin-left: 10px;
+}
+
+.nib-height {
+  height: 14.3px;
+  width: 10px;
+  background-color: #000;
+}
+
+.letter-img {
+  max-height: 100%;
+  width: auto;
+}
+
+.letter-img + .letter-img {
+  margin-left: 20px;
+}
+
+.nibs {
+  margin-right: 20px;
+  position: relative;
+}
+
+.angle-line {
+  display: flex;
+  padding: 0 20px;
+  justify-content: space-between;
+}
+
+.angle-line--fraktur  .angle-stroke  {
+  width: 1px;
+  background-color: red;
+  height: 25px;
+  transform: translateY(7px) rotate(70deg) ;
+}
+
+.letter-found--h {
+  transform: scale(1.61);
+  transform-origin: 0 100%;
+}
+
+.letter-found--h + .letter-found-h {
+  margin-left: 48px;
+}
+
+.letter-found--p {
+  transform: scale(1.61);
+  transform-origin: 0 0;
+}
+
+.letter-found--p + .letter-found--p {
+  margin-left: 48px;
+}
+
+.guideline--fraktur .base {
+  height: 79.4px;
+}
+
+.guideline--fraktur .angle-stroke {
+  transform: translateY(5px) rotate(55deg) ;
+}
+
+.guideline--fraktur .base .nib-height:nth-of-type(even){
+  margin-left: 0;
+}
+
+.guideline--fraktur .base .nib-height:nth-of-type(odd){
+  margin-left: 10px;
+}
+
+.guideline--fraktur .ascender .nib-height:nth-of-type(even) {
+  margin-left: 10px;
+}
+
+.guideline--fraktur .ascender .nib-height:nth-of-type(odd) {
+  margin-left: 0;
+}
+
+.guideline--fraktur .descender .nib-height:nth-of-type(odd) {
+  margin-left: 10px;
+}
+
+.guideline--fraktur .descender .nib-height:nth-of-type(even) {
+  margin-left: 0;
+}
+
+.guideline--fraktur .ascender .nib-height:first-of-type, 
+.guideline--fraktur .descender .nib-height:last-of-type {
+  height: 9.5px;
+}
+
+.guideline--fraktur .base .nibs:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 10px;
+  height: 9.5px;
+  background-color: #000;
+}
+
+.letter-fraktur--a {
+  transform: scale(1.11);
+}
+
+.letter-fraktur--h {
+  transform: translateY(38px) scale(2);
+  transform-origin: 0 100%;
+}
+
+.letter-fraktur--h + .letter-fraktur--h {
+  margin-left: 60px;
+}
+
+.letter-fraktur--i {
+  transform: scale(1.43);
+  transform-origin: 0 100%;
+}
+
+.letter-fraktur--i + .letter-fraktur--i {
+  margin-left: 32px;
+}
+.letter-fraktur--p {
+  transform: translateY(-2px) scale(1.56);
+  transform-origin: 0 0;
+}
+
+.letter-fraktur--p + .letter-fraktur--p {
+  margin-left: 50px;
 }

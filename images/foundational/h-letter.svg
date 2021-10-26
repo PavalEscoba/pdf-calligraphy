@@ -7,7 +7,7 @@
 		}
 
 		.shp0 {
-			fill: rgba(150, 151, 153, 0.5)
+			fill: #aaa
 		}
 	</style>
 	<g id="Page 1">

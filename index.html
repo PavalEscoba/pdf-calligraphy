@@ -25,16 +25,13 @@
             <div class="form-group">
               <label for="nib-type">Choose a nib width</label>
               <select class="custom-select" name="nib-type" id="nib">
-                <option value="1.5">Parallel Pen 1.5</option>
-                <option value="2.4">Parallel Pen 2.4</option>
+                <option value="2.4" disabled>Parallel Pen 2.4</option>
                 <option value="3.8">Parallel Pen 3.8</option>
-                <option value="6.0">Parallel Pen 6.0</option>
               </select>
               <label for="writing-type">Choose a writting style</label>
               <select class="custom-select" name="writting-type" id="writting">
                 <option value="foundational">Foundational hand</option>
-                <option value="gothic">Gothic</option>
-                <option value="copperplate">Parallel Pen 1.5</option>
+                <option value="gothic">Gothic Fraktur</option>
               </select>
             </div>
 
@@ -46,15 +43,15 @@
               <button class="btn btn-light" disabled data-letter="e">e</button>
               <button class="btn btn-light" disabled data-letter="f">f</button>
               <button class="btn btn-light" disabled data-letter="g">g</button>
-              <button class="btn btn-light" disabled data-letter="h">h</button>
+              <button class="btn btn-success" data-letter="h">h</button>
               <button class="btn btn-success" data-letter="i">i</button>
               <button class="btn btn-light" disabled data-letter="j">j</button>
-              <button class="btn btn-success" data-letter="k">k</button>
+              <button class="btn btn-light" disabled data-letter="k">k</button>
               <button class="btn btn-light" disabled data-letter="l">l</button>
               <button class="btn btn-light" disabled data-letter="m">m</button>
               <button class="btn btn-light" disabled data-letter="n">n</button>
-              <button class="btn btn-light" disabled data-letter="o">o</button>
-              <button class="btn btn-light" disabled data-letter="p">p</button>
+              <button class="btn btn-success" data-letter="o">o</button>
+              <button class="btn btn-success" data-letter="p">p</button>
               <button class="btn btn-light" disabled data-letter="q">q</button>
               <button class="btn btn-light" disabled data-letter="r">r</button>
               <button class="btn btn-light" disabled data-letter="s">s</button>
@@ -71,9 +68,18 @@
           <button id="download">Download it</button>
         </section>
       </div>
-      <div class="col-sm-6">
-        <div id="sheet">
-          <div class="guideline">
+      <div class="col-sm-12">
+        <div id="sheet" class="paper">
+          <div class="slopes">
+            <span class="slope"></span>
+            <span class="slope"></span>
+            <span class="slope"></span>
+            <span class="slope"></span>
+            <span class="slope"></span>
+            <span class="slope"></span>
+            <span class="slope"></span>
+          </div>
+          <div class="guideline guideline--fraktur">
             <div class="angle-line">
               <span class="angle-stroke"></span>
               <span class="angle-stroke"></span>
@@ -82,24 +88,140 @@
               <span class="angle-stroke"></span>
             </div>
             <div class="ascender">
-              <div class="nib-height"></div>
-              <div class="nib-height"></div>
-              <div class="nib-height"></div>
+              <div class="nibs">
+                <div class="nib-height"></div>
+                <div class="nib-height"></div>
+                <div class="nib-height"></div>
+              </div>
             </div>
             <div class="base">
-              <div class="nib-height"></div>
-              <div class="nib-height"></div>
-              <div class="nib-height"></div>
-              <div class="nib-height"></div>
-              <div class="nib-height"></div>
+              <div class="nibs">
+                <div class="nib-height"></div>
+                <div class="nib-height"></div>
+                <div class="nib-height"></div>
+                <div class="nib-height"></div>
+                <div class="nib-height"></div>
+              </div>
+              <!-- <img class="letter-img letter-found letter-found--a" src="./images/foundational/a-letter.svg" alt="">
+              <img class="letter-img letter-found letter-found--a" src="./images/foundational/a-letter.svg" alt="">
+              <img class="letter-img letter-found letter-found--a" src="./images/foundational/a-letter.svg" alt="">
+              <img class="letter-img letter-found letter-found--a" src="./images/foundational/a-letter.svg" alt="">
+              <img class="letter-img letter-found letter-found--a" src="./images/foundational/a-letter.svg" alt="">
+              <img class="letter-img letter-found letter-found--a" src="./images/foundational/a-letter.svg" alt="">
+              <img class="letter-img letter-found letter-found--a" src="./images/foundational/a-letter.svg" alt="">
+              <img class="letter-img letter-found letter-found--a" src="./images/foundational/a-letter.svg" alt="">
+              <img class="letter-img letter-found letter-found--a" src="./images/foundational/a-letter.svg" alt=""> -->
+
+              <!-- <img class="letter-img letter-found letter-found--i" src="./images/foundational/i-letter.svg" alt="">
+              <img class="letter-img letter-found letter-found--i" src="./images/foundational/i-letter.svg" alt="">
+              <img class="letter-img letter-found letter-found--i" src="./images/foundational/i-letter.svg" alt="">
+              <img class="letter-img letter-found letter-found--i" src="./images/foundational/i-letter.svg" alt="">
+              <img class="letter-img letter-found letter-found--i" src="./images/foundational/i-letter.svg" alt="">
+              <img class="letter-img letter-found letter-found--i" src="./images/foundational/i-letter.svg" alt="">
+              <img class="letter-img letter-found letter-found--i" src="./images/foundational/i-letter.svg" alt="">
+              <img class="letter-img letter-found letter-found--i" src="./images/foundational/i-letter.svg" alt="">
+              <img class="letter-img letter-found letter-found--i" src="./images/foundational/i-letter.svg" alt="">
+              <img class="letter-img letter-found letter-found--i" src="./images/foundational/i-letter.svg" alt="">
+              <img class="letter-img letter-found letter-found--i" src="./images/foundational/i-letter.svg" alt="">
+              <img class="letter-img letter-found letter-found--i" src="./images/foundational/i-letter.svg" alt="">
+              <img class="letter-img letter-found letter-found--i" src="./images/foundational/i-letter.svg" alt="">
+              <img class="letter-img letter-found letter-found--i" src="./images/foundational/i-letter.svg" alt="">
+              <img class="letter-img letter-found letter-found--i" src="./images/foundational/i-letter.svg" alt="">
+              <img class="letter-img letter-found letter-found--i" src="./images/foundational/i-letter.svg" alt="">
+              <img class="letter-img letter-found letter-found--i" src="./images/foundational/i-letter.svg" alt="">
+              <img class="letter-img letter-found letter-found--i" src="./images/foundational/i-letter.svg" alt=""> -->
+
+              <!-- <img class="letter-img letter-found letter-found--h" src="./images/foundational/h-letter.svg" alt="">
+              <img class="letter-img letter-found letter-found--h" src="./images/foundational/h-letter.svg" alt="">
+              <img class="letter-img letter-found letter-found--h" src="./images/foundational/h-letter.svg" alt="">
+              <img class="letter-img letter-found letter-found--h" src="./images/foundational/h-letter.svg" alt="">
+              <img class="letter-img letter-found letter-found--h" src="./images/foundational/h-letter.svg" alt="">
+              <img class="letter-img letter-found letter-found--h" src="./images/foundational/h-letter.svg" alt="">
+              <img class="letter-img letter-found letter-found--h" src="./images/foundational/h-letter.svg" alt="">
+              <img class="letter-img letter-found letter-found--h" src="./images/foundational/h-letter.svg" alt=""> -->
+              <!-- 
+              <img class="letter-img letter-found letter-found--o" src="./images/foundational/o-letter.svg" alt="">
+              <img class="letter-img letter-found letter-found--o" src="./images/foundational/o-letter.svg" alt="">
+              <img class="letter-img letter-found letter-found--o" src="./images/foundational/o-letter.svg" alt="">
+              <img class="letter-img letter-found letter-found--o" src="./images/foundational/o-letter.svg" alt="">
+              <img class="letter-img letter-found letter-found--o" src="./images/foundational/o-letter.svg" alt="">
+              <img class="letter-img letter-found letter-found--o" src="./images/foundational/o-letter.svg" alt="">
+              <img class="letter-img letter-found letter-found--o" src="./images/foundational/o-letter.svg" alt="">
+              <img class="letter-img letter-found letter-found--o" src="./images/foundational/o-letter.svg" alt=""> -->
+
+
+              <!-- <img class="letter-img letter-found letter-found--p" src="./images/foundational/p-letter.svg" alt="">
+              <img class="letter-img letter-found letter-found--p" src="./images/foundational/p-letter.svg" alt="">
+              <img class="letter-img letter-found letter-found--p" src="./images/foundational/p-letter.svg" alt="">
+              <img class="letter-img letter-found letter-found--p" src="./images/foundational/p-letter.svg" alt="">
+              <img class="letter-img letter-found letter-found--p" src="./images/foundational/p-letter.svg" alt="">
+              <img class="letter-img letter-found letter-found--p" src="./images/foundational/p-letter.svg" alt="">
+              <img class="letter-img letter-found letter-found--p" src="./images/foundational/p-letter.svg" alt="">
+              <img class="letter-img letter-found letter-found--p" src="./images/foundational/p-letter.svg" alt=""> -->
+
+              <!-- <img class="letter-img letter-fraktur letter-fraktur--a" src="./images/fraktur/a-letter.svg" alt="">
+              <img class="letter-img letter-fraktur letter-fraktur--a" src="./images/fraktur/a-letter.svg" alt="">
+              <img class="letter-img letter-fraktur letter-fraktur--a" src="./images/fraktur/a-letter.svg" alt="">
+              <img class="letter-img letter-fraktur letter-fraktur--a" src="./images/fraktur/a-letter.svg" alt="">
+              <img class="letter-img letter-fraktur letter-fraktur--a" src="./images/fraktur/a-letter.svg" alt="">
+              <img class="letter-img letter-fraktur letter-fraktur--a" src="./images/fraktur/a-letter.svg" alt="">
+              <img class="letter-img letter-fraktur letter-fraktur--a" src="./images/fraktur/a-letter.svg" alt="">
+              <img class="letter-img letter-fraktur letter-fraktur--a" src="./images/fraktur/a-letter.svg" alt="">
+              <img class="letter-img letter-fraktur letter-fraktur--a" src="./images/fraktur/a-letter.svg" alt="">
+              <img class="letter-img letter-fraktur letter-fraktur--a" src="./images/fraktur/a-letter.svg" alt=""> -->
+
+              <!-- <img class="letter-img letter-fraktur letter-fraktur--h" src="./images/fraktur/h-letter.svg" alt="">
+              <img class="letter-img letter-fraktur letter-fraktur--h" src="./images/fraktur/h-letter.svg" alt="">
+              <img class="letter-img letter-fraktur letter-fraktur--h" src="./images/fraktur/h-letter.svg" alt="">
+              <img class="letter-img letter-fraktur letter-fraktur--h" src="./images/fraktur/h-letter.svg" alt="">
+              <img class="letter-img letter-fraktur letter-fraktur--h" src="./images/fraktur/h-letter.svg" alt="">
+              <img class="letter-img letter-fraktur letter-fraktur--h" src="./images/fraktur/h-letter.svg" alt="">
+              <img class="letter-img letter-fraktur letter-fraktur--h" src="./images/fraktur/h-letter.svg" alt="">
+              <img class="letter-img letter-fraktur letter-fraktur--h" src="./images/fraktur/h-letter.svg" alt=""> -->
+              <!-- 
+              <img class="letter-img letter-fraktur letter-fraktur--i" src="./images/fraktur/i-letter.svg" alt="">
+              <img class="letter-img letter-fraktur letter-fraktur--i" src="./images/fraktur/i-letter.svg" alt="">
+              <img class="letter-img letter-fraktur letter-fraktur--i" src="./images/fraktur/i-letter.svg" alt="">
+              <img class="letter-img letter-fraktur letter-fraktur--i" src="./images/fraktur/i-letter.svg" alt="">
+              <img class="letter-img letter-fraktur letter-fraktur--i" src="./images/fraktur/i-letter.svg" alt="">
+              <img class="letter-img letter-fraktur letter-fraktur--i" src="./images/fraktur/i-letter.svg" alt="">
+              <img class="letter-img letter-fraktur letter-fraktur--i" src="./images/fraktur/i-letter.svg" alt="">
+              <img class="letter-img letter-fraktur letter-fraktur--i" src="./images/fraktur/i-letter.svg" alt="">
+              <img class="letter-img letter-fraktur letter-fraktur--i" src="./images/fraktur/i-letter.svg" alt="">
+              <img class="letter-img letter-fraktur letter-fraktur--i" src="./images/fraktur/i-letter.svg" alt="">
+              <img class="letter-img letter-fraktur letter-fraktur--i" src="./images/fraktur/i-letter.svg" alt="">
+              <img class="letter-img letter-fraktur letter-fraktur--i" src="./images/fraktur/i-letter.svg" alt="">
+              <img class="letter-img letter-fraktur letter-fraktur--i" src="./images/fraktur/i-letter.svg" alt=""> -->
+
+
+              <!-- <img class="letter-img letter-fraktur letter-fraktur--o" src="./images/fraktur/o-letter.svg" alt="">
+              <img class="letter-img letter-fraktur letter-fraktur--o" src="./images/fraktur/o-letter.svg" alt="">
+              <img class="letter-img letter-fraktur letter-fraktur--o" src="./images/fraktur/o-letter.svg" alt="">
+              <img class="letter-img letter-fraktur letter-fraktur--o" src="./images/fraktur/o-letter.svg" alt="">
+              <img class="letter-img letter-fraktur letter-fraktur--o" src="./images/fraktur/o-letter.svg" alt="">
+              <img class="letter-img letter-fraktur letter-fraktur--o" src="./images/fraktur/o-letter.svg" alt="">
+              <img class="letter-img letter-fraktur letter-fraktur--o" src="./images/fraktur/o-letter.svg" alt="">
+              <img class="letter-img letter-fraktur letter-fraktur--o" src="./images/fraktur/o-letter.svg" alt="">
+              <img class="letter-img letter-fraktur letter-fraktur--o" src="./images/fraktur/o-letter.svg" alt="">
+              <img class="letter-img letter-fraktur letter-fraktur--o" src="./images/fraktur/o-letter.svg" alt=""> -->
+              <img class="letter-img letter-fraktur letter-fraktur--p" src="./images/fraktur/p-letter.svg" alt="">
+              <img class="letter-img letter-fraktur letter-fraktur--p" src="./images/fraktur/p-letter.svg" alt="">
+              <img class="letter-img letter-fraktur letter-fraktur--p" src="./images/fraktur/p-letter.svg" alt="">
+              <img class="letter-img letter-fraktur letter-fraktur--p" src="./images/fraktur/p-letter.svg" alt="">
+              <img class="letter-img letter-fraktur letter-fraktur--p" src="./images/fraktur/p-letter.svg" alt="">
+              <img class="letter-img letter-fraktur letter-fraktur--p" src="./images/fraktur/p-letter.svg" alt="">
+              <img class="letter-img letter-fraktur letter-fraktur--p" src="./images/fraktur/p-letter.svg" alt="">
+              <img class="letter-img letter-fraktur letter-fraktur--p" src="./images/fraktur/p-letter.svg" alt="">
+
             </div>
             <div class="descender">
-              <div class="nib-height"></div>
-              <div class="nib-height"></div>
-              <div class="nib-height"></div>
+              <div class="nibs">
+                <div class="nib-height"></div>
+                <div class="nib-height"></div>
+                <div class="nib-height"></div>
+              </div>
             </div>
           </div>
-
         </div>
       </div>
     </div>

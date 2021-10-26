@@ -13,10 +13,10 @@ window.addEventListener('load', () => {
   const downloadBtn = document.querySelector('#download');
   const styleSelect = document.querySelector('#writting');
   const nibSelect = document.querySelector('#nib');
-  const opt = {
-    margin: 1,
+  var opt = {
+    margin: 2,
     filename: 'myfile.pdf',
-    image: { type: 'jpeg' },
+    html2canvas: { scale: 2 },
     jsPDF: { unit: 'mm', format: 'letter', orientation: 'portrait' }
   };
 
