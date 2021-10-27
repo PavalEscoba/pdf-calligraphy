@@ -1,4 +1,5 @@
 $(function () {
+  console.log('ready');
   const letterBtnElements = $('.letter-btn');
   const letterImgElements = $('.letter-img');
   const downloadBtnElement = $('#download');
@@ -8,6 +9,7 @@ $(function () {
   let letterValue = '';
 
   const downloadHandler = () => {
+    console.log(html2pdf);
     html2pdf().from(sheet).save();
   };
 
