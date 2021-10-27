@@ -43,8 +43,8 @@ select + label {
   position: relative;
   padding-top: 30px;
   width: 210mm;
-  height: 297mm;
-  background-color: #eee;
+  height: 295mm;
+  border: 1px solid #eee;
 }
 
 .slopes {
@@ -77,7 +77,7 @@ select + label {
 }
 
 .guideline + .guideline {
-  margin-top: 14.3px;
+  margin-top: 24px;
 }
 
 .ascender, .base,.descender {
@@ -130,6 +130,11 @@ select + label {
 .letter-img {
   max-height: 100%;
   width: auto;
+  display: none;
+}
+
+.letter-img.shown{
+  display: block;
 }
 
 .letter-img + .letter-img {
@@ -154,12 +159,17 @@ select + label {
   transform: translateY(7px) rotate(70deg) ;
 }
 
+.letter-found--i {
+  transform: scale(1.35);
+  transform-origin: 0 100%;
+}
+
 .letter-found--h {
   transform: scale(1.61);
   transform-origin: 0 100%;
 }
 
-.letter-found--h + .letter-found-h {
+.letter-found--h + .letter-found--h {
   margin-left: 48px;
 }
 

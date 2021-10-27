@@ -1,47 +1,31 @@
-window.addEventListener('load', () => {
-  // function genPDF() {
-  //   var doc = new jsPDF('l');
-
-  //   doc.lines([[2, 2], [-2, 2], [1, 1, 2, 2, 3, 3], [2, 1]], 212, 110, 10);
-  //   doc.save('example.pdf');
-  // };
-
-  // const downloadBtn = document.querySelector('#download');
-  // downloadBtn.addEventListener('click', genPDF);
-
-  const section = document.querySelector('#sheet');
-  const downloadBtn = document.querySelector('#download');
-  const styleSelect = document.querySelector('#writting');
-  const nibSelect = document.querySelector('#nib');
-  var opt = {
-    margin: 2,
-    filename: 'myfile.pdf',
-    html2canvas: { scale: 2 },
-    jsPDF: { unit: 'mm', format: 'letter', orientation: 'portrait' }
-  };
+$(function () {
+  const letterBtnElements = $('.letter-btn');
+  const letterImgElements = $('.letter-img');
+  const downloadBtnElement = $('#download');
+  const writingStyleSelectElement = $('#writting');
+  const sheet = document.getElementById('sheet');
+  let writingStyleValue = 'found';
+  let letterValue = '';
 
   const downloadHandler = () => {
-    html2pdf().from(section).save();
+    html2pdf().from(sheet).save();
   };
 
-  const canvasProps = {
-    foundational: { base: 5, asceder: 3, descender: 3, interline: 1, nibAngle: 30, slope: 0 },
-    fraktur: { base: 5.5, asceder: 2.5, descender: 2.5, interline: 1, nibAngle: 45, slope: 0 }
-  }
-  const PX_TO_MM_RATIO = 3.78;
+  const selectWritingStyleHandler = function (e) {
+    writingStyleValue = this.value;
+    $('.guideline').attr('class', `guideline guideline--${writingStyleValue}`)
+  };
 
+  const letterBtnClickHandler = function (e) {
+    letterValue = $(this).data('letter');
+    letterImgElements.removeClass('shown');
+    const dataValue = `${writingStyleValue}-${letterValue}`;
+    $(`[data-letter="${dataValue}"]`).addClass('shown');
 
+  };
 
-  const drawGuidelines = (nibWidth, style) => {
+  downloadBtnElement.on('click', downloadHandler);
+  letterBtnElements.on('click', letterBtnClickHandler);
+  writingStyleSelectElement.on('change', selectWritingStyleHandler);
 
-  }
-
-  const selectHandler = (e) => {
-    console.log(nibSelect.value);
-  }
-
-  downloadBtn.addEventListener('click', downloadHandler);
-  nibSelect.addEventListener('change', selectHandler);
-  styleSelect.addEventListener('click', selectHandler);
-
-});
+})
