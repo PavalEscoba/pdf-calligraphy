@@ -24,13 +24,6 @@ a:hover {
   color: lightblue;
 }
 
-p {
-  font-size: 24px;
-  line-height: 1.41;
-  border-bottom: 1px solid #444;
-  padding-bottom: 20px;
-}
-
 section {
   padding: 20px;
 }
@@ -152,11 +145,15 @@ select + label {
   justify-content: space-between;
 }
 
-.angle-line--fraktur  .angle-stroke  {
+.angle-stroke {
   width: 1px;
   background-color: red;
   height: 25px;
   transform: translateY(7px) rotate(70deg) ;
+}
+
+.guideline--fraktur .angle-stroke  {
+  transform: translateY(7px) rotate(55deg) ;
 }
 
 .letter-found--i {
