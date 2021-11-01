@@ -1,16 +1,15 @@
 $(function () {
-  console.log('ready');
   const letterBtnElements = $('.letter-btn');
   const letterImgElements = $('.letter-img');
   const downloadBtnElement = $('#download');
   const writingStyleSelectElement = $('#writting');
   const sheet = document.getElementById('sheet');
   let writingStyleValue = 'found';
-  let letterValue = '';
+  let letterValue = 'a';
 
   const downloadHandler = () => {
-    console.log(html2pdf);
-    html2pdf().from(sheet).save();
+    const fileName = `${writingStyleValue}-letter-${letterValue}`
+    html2pdf().from(sheet).save(fileName);
   };
 
   const selectWritingStyleHandler = function (e) {

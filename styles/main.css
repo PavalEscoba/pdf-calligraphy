@@ -130,12 +130,11 @@ select + label {
   display: block;
 }
 
-.letter-img + .letter-img {
+.letter-img {
   margin-left: 20px;
 }
 
 .nibs {
-  margin-right: 20px;
   position: relative;
 }
 
@@ -176,6 +175,43 @@ select + label {
 }
 
 .letter-found--p + .letter-found--p {
+  margin-left: 48px;
+}
+
+.letter-found--q {
+  transform: scale(1.61);
+  transform-origin: 0 0;
+}
+
+.letter-found--q + .letter-found--q {
+  margin-left: 48px;
+}
+
+
+.letter-found--b {
+  transform: scale(1.61);
+  transform-origin: 0 100%;
+}
+
+.letter-found--b + .letter-found--b {
+  margin-left: 48px;
+}
+
+.letter-found--d {
+  transform: scale(1.61);
+  transform-origin: 0 100%;
+}
+
+.letter-found--d + .letter-found--d {
+  margin-left: 48px;
+}
+
+.letter-found--f {
+  transform: scale(1.61);
+  transform-origin: 0 100%;
+}
+
+.letter-found--f + .letter-found--f {
   margin-left: 48px;
 }
 
