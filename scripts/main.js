@@ -7,6 +7,50 @@ $(function () {
   let writingStyleValue = 'found';
   let letterValue = 'a';
 
+  const chooseLetterBtns = $('.letters .btn');
+
+
+  const foundLetters = ['b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+
+  const frakturLetters = ['a', 'h', 'i', 'o', 'p'];
+
+  const displayActiveBtns = (writtingStyle) => {
+    if (writtingStyle === 'found') {
+      chooseLetterBtns.each((idx, item) => {
+        const letterData = $(item).data('letter');
+        if (foundLetters.includes(letterData) && !$(item).hasClass('btn-success')) {
+          item.disabled = false;
+        } else {
+          item.disabled = true;
+        }
+      });
+    };
+
+    if (writtingStyle === 'fraktur') {
+      chooseLetterBtns.each((idx, item) => {
+        const letterData = $(item).data('letter');
+        if (frakturLetters.includes(letterData) && !$(item).hasClass('btn-success')) {
+          $(item).removeClass('btn-light');
+          $(item).addClass('btn-success');
+          item.disabled = false;
+          console.log(item.disabled);
+        }
+      });
+    };
+
+    // if (writtingStyle === 'fraktur') {
+    //   chooseLetterBtns.each((idx, item) => {
+    //     const letterData = $(item).data('letter');
+    //     if (frakturLetters.some(letterData) && !$(item).hasClass('btn-success')) {
+    //       $(item).addClass('btn-success');
+    //     }
+    //   });
+    // };
+  };
+
+  displayActiveBtns('found');
+
+
   const downloadHandler = () => {
     const fileName = `${writingStyleValue}-letter-${letterValue}`
     html2pdf().from(sheet).save(fileName);
@@ -14,6 +58,7 @@ $(function () {
 
   const selectWritingStyleHandler = function (e) {
     writingStyleValue = this.value;
+    displayActiveBtns(writingStyleValue);
     $('.guideline').attr('class', `guideline guideline--${writingStyleValue}`)
   };
 
