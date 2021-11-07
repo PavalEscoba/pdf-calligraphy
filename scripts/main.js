@@ -10,7 +10,7 @@ $(function () {
   const chooseLetterBtns = $('.letters .btn');
 
 
-  const foundLetters = ['b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+  const foundLetters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 
   const frakturLetters = ['a', 'h', 'i', 'o', 'p'];
 
@@ -18,7 +18,7 @@ $(function () {
     if (writtingStyle === 'found') {
       chooseLetterBtns.each((idx, item) => {
         const letterData = $(item).data('letter');
-        if (foundLetters.includes(letterData) && !$(item).hasClass('btn-success')) {
+        if (foundLetters.includes(letterData)) {
           item.disabled = false;
         } else {
           item.disabled = true;
@@ -29,23 +29,13 @@ $(function () {
     if (writtingStyle === 'fraktur') {
       chooseLetterBtns.each((idx, item) => {
         const letterData = $(item).data('letter');
-        if (frakturLetters.includes(letterData) && !$(item).hasClass('btn-success')) {
-          $(item).removeClass('btn-light');
-          $(item).addClass('btn-success');
+        if (frakturLetters.includes(letterData)) {
           item.disabled = false;
-          console.log(item.disabled);
+        } else {
+          item.disabled = true;
         }
       });
     };
-
-    // if (writtingStyle === 'fraktur') {
-    //   chooseLetterBtns.each((idx, item) => {
-    //     const letterData = $(item).data('letter');
-    //     if (frakturLetters.some(letterData) && !$(item).hasClass('btn-success')) {
-    //       $(item).addClass('btn-success');
-    //     }
-    //   });
-    // };
   };
 
   displayActiveBtns('found');
@@ -66,6 +56,7 @@ $(function () {
     letterValue = $(this).data('letter');
     letterImgElements.removeClass('shown');
     const dataValue = `${writingStyleValue}-${letterValue}`;
+    console.log(dataValue);
     $(`[data-letter="${dataValue}"]`).addClass('shown');
 
   };
