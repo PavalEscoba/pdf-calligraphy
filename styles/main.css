@@ -133,9 +133,23 @@ select + label {
   display: block;
 }
 
-.letter-img {
+.img-wrapper {
   margin-left: 20px;
 }
+
+.img-wrapper.bordered {
+  border-left: 1px solid #555;
+  border-right: 1px solid #555;
+}
+
+.img-wrapper.bordered img {
+  opacity: 0;
+}
+
+.img-wrapper.bordered img.active {
+  opacity: 1;
+}
+
 
 .nibs {
   position: relative;

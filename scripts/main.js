@@ -42,6 +42,7 @@ $(function () {
 
 
   const downloadHandler = () => {
+    $('html,body').scrollTop(0);
     const fileName = `${writingStyleValue}-letter-${letterValue}`
     html2pdf().from(sheet).save(fileName);
   };
