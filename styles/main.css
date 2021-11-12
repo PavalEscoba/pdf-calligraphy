@@ -80,6 +80,10 @@ select + label {
   position: relative;
 }
 
+.ascender, .descender {
+  display: none;
+}
+
 .base {
   height: 72px;
   display: flex;
@@ -142,6 +146,10 @@ select + label {
   border-right: 1px solid #555;
 }
 
+.img-wrapper.dn {
+display: none;
+}
+
 .img-wrapper.bordered img {
   opacity: 0;
 }
@@ -165,7 +173,7 @@ select + label {
   width: 1px;
   background-color: red;
   height: 25px;
-  transform: translateY(7px) rotate(70deg) ;
+  transform: translateY(7px) rotate(61deg) ;
 }
 
 .guideline--fraktur .angle-stroke  {
